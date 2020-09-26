@@ -9,7 +9,8 @@ export interface ReservationDetailsDto {
     personalInformation: PersonalInformationDto[];
     reservationTitle: string;
     reservationDate: Date;
-    nrOfPeople: number;
+    nrOfGuests: number;
+    guestName: string;
     roomName: string;
     isCatering: boolean;
     isInvoice: boolean;

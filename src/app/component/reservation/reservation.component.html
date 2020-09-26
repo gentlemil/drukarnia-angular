@@ -1,4 +1,42 @@
-<p>reservation reactive form</p>>
+<p>reservation reactive form</p>
 <div class="container">
-    
+    <form [formGroup]="reservationModel" (ngSubmit)="onSubmit()">
+        <div class="form-group" formGroupName="personalInformation">
+            <label>First Name: </label>
+            <input class="form-control" type="text" formControlName="givenName">
+            <label>Last Name: </label>
+            <input class="form-control" type="text" formControlName="familyName">
+            <label>E-mail: </label>
+            <input class="form-control" type="text" formControlName="email">
+            <label>Phone Number: </label>
+            <input class="form-control" type="text" formControlName="phoneNumber">
+        </div>
+        <div class="form-group">
+            <label>Reservation title: </label>
+            <input class="form-control" type="text" formControlName="reservationTitle">
+            <label>Term of reservation: </label>
+            <input class="form-control" type="text" formControlName="reservationDate">
+            <label>Number of guests: </label>
+            <input class="form-control" type="text" formControlName="nrOfGuests">
+            <button class="btn btn-primary" (click)="addGuest()">+</button>
+            <ul formArrayName="guestName">
+                <li *ngFor="let e of guestNameFormArray.controls; let i=index" >
+                    <label>Guest name: </label>
+                    <input class="form-control" type="text" [formControlName]="i">
+                </li>
+            </ul>
+            <button class="btn btn-primary" type="submit">ADD</button>
+            <label>Choose bar: </label>
+            <input class="form-control" type="text" formControlName="roomName">
+            <label>Catering: </label>
+            <input class="form-control" type="text" formControlName="isCatering">
+            <label>Invoice: </label>
+            <input class="form-control" type="text" formControlName="isInvoice">
+            <label>Comment: </label>
+            <input class="form-control" type="text" formControlName="additionalInformation">
+        </div>
+    </form>
+    <button class="btn btn-primary" type="submit">SEND</button>
+    <button class="btn btn-primary" (click)="resetForm()">CLEAN</button>
+    <pre>{{ value }}</pre>
 </div>
