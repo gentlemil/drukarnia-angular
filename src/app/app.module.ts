@@ -6,11 +6,13 @@ import { ReservationComponent } from './component/reservation/reservation.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './view/navbar/navbar.component';
 import { ProfileModule } from './view/profile/profile.module';
+import { ProfileBarComponent } from './component/profile-bar/profile-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
     ReservationComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileBarComponent
   ],
   imports: [
     BrowserModule,

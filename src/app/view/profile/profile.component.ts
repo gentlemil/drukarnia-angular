@@ -14,8 +14,9 @@ export class ProfileComponent implements OnInit {
   constructor(private profileService: ProfileService) { }
 
   ngOnInit(): void {
-    this.profileService.getUserProfile()
-    .subscribe(user => {
+    const profile$ = this.profileService.getUserProfile()
+
+    profile$.subscribe(user => {
       this.profile = user;
     })
   }

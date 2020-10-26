@@ -1,9 +1,15 @@
 <div class="col">
     <div class="row" *ngIf="profile">
-        <p>User profile</p>
-        <p>Id: {{profile.id}}</p>
-        <p>Username: {{profile.username}}</p>
-        <p>Name: {{profile.name}}</p>
-        <p>Email: {{profile.email}}</p>
+        <h3>User profile</h3>
+        <dl class="row">
+            <dt class="col-3">Id:</dt>
+            <dd class="col-9">{{profile.id}}</dd>
+            <dt class="col-3">Username:</dt>
+            <dd class="col-9">{{profile.username}}</dd>
+            <dt class="col-3">Name:</dt>
+            <dd class="col-9">{{profile.name}}</dd>
+            <dt class="col-3">Email:</dt>
+            <dd class="col-9">{{profile.email}}</dd>
+        </dl>
     </div>
 </div>
