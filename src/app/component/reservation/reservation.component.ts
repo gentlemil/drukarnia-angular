@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
-import { PersonalInformationDto, ReservationDetailsDto } from '../../../model/model';
+import { PersonalInformationDto, ReservationDetailsDto } from '../../../model/reservation';
 // check when can I use path '@model/model'
 
 @Component({

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../../model/user';
-import { ConnectableObservable, Subject } from 'rxjs';
+import { User } from '../../../model/user';
+import { ConnectableObservable, Subject, BehaviorSubject } from 'rxjs';
 import { multicast, refCount, share } from 'rxjs/operators';
 // import { ConnectableObservable } from 'rxjs/observable/ConnectableObservable'
 @Injectable({
