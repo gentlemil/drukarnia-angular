@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">practise</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,24 +7,32 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#" (click)="profile = false">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" (click)="profile = false" routerLink='/'>Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="profile = false">Profile</a>
+          <a class="nav-link" (click)="profile = false" routerLink='/profile'>Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="profile = false" routerLink='/todos'>Todos</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" routerLink='/reservation' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Reservation
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Add</a>
-            <a class="dropdown-item" href="#">Show all</a>
+            <a class="dropdown-item" >Add</a>
+            <a class="dropdown-item" >Show all</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Menu</a>
+          <a class="nav-link disabled" routerLink='/menu'>Menu</a>
+        </li>        
+        
+        <li class="nav-item">
+          <a class="nav-link disabled" routerLink='/contact'>Contact</a>
         </li>
       </ul>
-          <app-profile-bar></app-profile-bar>
+      <app-profile-bar></app-profile-bar>
+      <a class="nav-link" (click)="profile = false" routerLink='/login'>Log in</a>
     </div>
   </nav>

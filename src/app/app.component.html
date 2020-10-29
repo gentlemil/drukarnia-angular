@@ -1,23 +1,4 @@
 <app-navbar></app-navbar>
-
-<!-- <div class="container">
-    <div class="row">
-        <div class="col pt-4">
-            <app-profile></app-profile>
-        </div>
-    </div>
-</div> -->
-
-<div class="container pt-4">
-    <div class="row">
-      <div class="col" *ngIf="profile">
-        <app-profile></app-profile>
-      </div>
-      <div class="col-10" *ngIf="!profile" class="offset-1">
-          <p>Hello, go to your <b>profile</b>!</p>
-      </div>
-    </div>
-</div>
-<div class="container pt-4">
-  <app-reservation></app-reservation>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
